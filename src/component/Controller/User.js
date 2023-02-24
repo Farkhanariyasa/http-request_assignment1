@@ -73,9 +73,11 @@ function User(props) {
             </TableHead>
             <TableBody>
               {user.slice(0, ctx.value).map((user) => (
-                <TableRow>
+                <TableRow
+                  key={user.id} 
+                >
                   <>
-                    <TableCell>{user.id}</TableCell>
+                    <TableCell >{user.id}</TableCell>
                     <TableCell>{user.name}</TableCell>
                     <TableCell>{user.email}</TableCell>
                     <TableCell>{user.username}</TableCell>
